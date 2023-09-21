@@ -1,0 +1,43 @@
+<div class="container" fxLayout="row" fxLayoutAlign="center none">
+  <div fxFlex="98%">
+    <mat-card class="booking-card">
+      <mat-card-content>
+        <h2>Stepper</h2>
+
+        <div class="operation-detail container" fxLayout="row" fxLayoutAlign="center none">
+          <div fxFlex="98%">
+
+            <mat-horizontal-stepper linear="true" #stepper>
+
+              <mat-step [stepControl]="step1">
+
+                <ng-template matStepLabel>Step 1</ng-template>
+                <app-step1></app-step1>
+              </mat-step>
+
+              <mat-step [stepControl]="step2">
+
+                <ng-template matStepLabel>Step2</ng-template>
+                <app-step2></app-step2>
+
+              </mat-step>
+
+              <mat-step [stepControl]="step3">
+
+                <ng-template matStepLabel>Step 3</ng-template>
+                <app-step3></app-step3>
+
+              </mat-step>
+
+            </mat-horizontal-stepper>
+
+          </div>
+        </div>
+      </mat-card-content>
+    </mat-card>
+
+  </div>
+</div>
+
+Name from step 1:
+{{step1Component.name}}
